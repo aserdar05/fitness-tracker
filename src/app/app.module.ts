@@ -20,6 +20,8 @@ import { PastTrainingsComponent } from './ui/training/past-trainings/past-traini
 import { CurrentTrainingComponent } from './ui/training/current-training/current-training.component';
 import { NewTrainingComponent } from './ui/training/new-training/new-training.component';
 import { StopTrainingModalComponent } from './ui/training/modal/stop-training-modal/stop-training-modal.component';
+import { AuthService } from './service/auth.service';
+import { TrainingService } from './service/training.service';
 
 @NgModule({
   declarations: [
@@ -47,7 +49,7 @@ import { StopTrainingModalComponent } from './ui/training/modal/stop-training-mo
     MaterialModule,
     FlexLayoutModule
   ],
-  providers: [ProductsService],
+  providers: [ProductsService, AuthService, TrainingService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
